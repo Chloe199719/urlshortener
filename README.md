@@ -21,8 +21,6 @@ Welcome to URShorter! This is a modern URL shortening application built with Nex
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of [Node.js and NPM](https://nodejs.org/en/download/).
-- You have installed [Next.js](https://nextjs.org/learn/basics/create-nextjs-app).
-- You have a basic understanding of JavaScript and React.
 
 ### Installing URShorter
 
@@ -31,7 +29,7 @@ To install URShorter, follow these steps:
 Linux and macOS:
 
 ```bash
-git clone https://github.com/Chloe199719/URShorter
+git clone https://github.com/Chloe199719/urlshortene
 cd URShorter
 npm install
 ```
@@ -39,7 +37,7 @@ npm install
 Windows::
 
 ```bash
-git clone https://github.com/Your-Username/URShorter
+git clone https://github.com/Chloe199719/urlshortene
 cd URShorter
 npm install
 
