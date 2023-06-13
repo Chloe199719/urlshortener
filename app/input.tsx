@@ -1,13 +1,15 @@
 "use client";
-
+import toast, { Toaster } from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
+import { z } from "zod";
 
 type Props = {};
 function Input({}: Props) {
   const mutation = useMutation({
     mutationFn: async (url: string) => {
+      z.string().url().parse(url);
       console.log(url);
       const data = await axios.post("api/", { url: url });
       return data.data;
@@ -18,9 +20,16 @@ function Input({}: Props) {
           process.env.NEXT_PUBLIC_VERCEL_URL
         }/${data.url}`
       );
+      setInput("");
       setError("");
     },
-    onError: (error) => {
+    onError: (error: any) => {
+      if (error.issues) {
+        setError(error.issues[0].message);
+        toast.error(error.issues[0].message);
+        return;
+      }
+
       setUrl("");
       setError("Could not get a shorter url");
     },
@@ -47,17 +56,24 @@ function Input({}: Props) {
         Get a Shorter Url
       </button>
       {url ? (
-        <div
-          onClick={() => {
-            navigator.clipboard.writeText(url);
-          }}
-          className="text-white"
-        >
-          {url}{" "}
+        <div className="flex text-lg gap-2">
+          <span>Here your shorter url:</span>
+          <div
+            onClick={() => {
+              toast.success("Copied to clipboard");
+              navigator.clipboard.writeText(url);
+            }}
+            className="text-white hover:text-blue-500 cursor-pointer text-lg"
+          >
+            {url}
+          </div>
         </div>
       ) : (
-        error && <div className="text-white">{error} </div>
+        error && (
+          <div className="text-red-600 text-lg  font-semibold">{error} </div>
+        )
       )}
+      <Toaster />
     </div>
   );
 }
