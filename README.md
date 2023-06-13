@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# URShorter App
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+1. [Overview](#overview)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Development](#development)
+5. [Testing](#testing)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+## Overview
+
+Welcome to URShorter! This is a modern URL shortening application built with Next.js, a React-based framework offering out-of-the-box server-side rendering and generating static websites. Our aim is to provide a simple, yet powerful tool for shortening those unwieldy URLs into more manageable, shareable forms.
+
+## Installation
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have installed the latest version of [Node.js and NPM](https://nodejs.org/en/download/).
+- You have installed [Next.js](https://nextjs.org/learn/basics/create-nextjs-app).
+- You have a basic understanding of JavaScript and React.
+
+### Installing URShorter
+
+To install URShorter, follow these steps:
+
+Linux and macOS:
+
+```bash
+git clone https://github.com/Chloe199719/URShorter
+cd URShorter
+npm install
+```
+
+Windows::
+
+```bash
+git clone https://github.com/Your-Username/URShorter
+cd URShorter
+npm install
+
+```
+
+## Usage
+
+To use URShorter, follow these steps:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result. You can start shortening your URLs now!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+If you want to contribute to URShorter, follow these steps:
 
-## Learn More
+1. Fork the Repository.
+2. Create a Branch (git checkout -b feature/AmazingFeature).
+3. Commit your Changes (git commit -m 'Add some AmazingFeature').
+4. Push to the Branch (git push origin feature/AmazingFeature).
+5. Open a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To contribute to URShorter, please see the Contributing guide for more information.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project uses the following license: MIT.
