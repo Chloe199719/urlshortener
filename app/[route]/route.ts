@@ -12,6 +12,7 @@ export async function GET(
     });
     return NextResponse.redirect(new URL(data.url));
   } catch (error) {
+    console.log(error);
     return NextResponse.redirect(new URL("https://google.com"));
   }
 }

@@ -42,6 +42,7 @@ export async function POST(req: Request) {
     });
     return new Response(JSON.stringify({ url: shortUrl }), { status: 200 });
   } catch (error) {
+    console.log(error);
     return new Response(JSON.stringify({ error: "didnt work sorry" }), {
       status: 400,
     });
